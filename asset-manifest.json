@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/moxi/static/css/main.18d15f8a.css",
-    "main.js": "/moxi/static/js/main.1af03d2e.js",
+    "main.js": "/moxi/static/js/main.d3c49965.js",
     "index.html": "/moxi/index.html",
     "main.18d15f8a.css.map": "/moxi/static/css/main.18d15f8a.css.map",
-    "main.1af03d2e.js.map": "/moxi/static/js/main.1af03d2e.js.map"
+    "main.d3c49965.js.map": "/moxi/static/js/main.d3c49965.js.map"
   },
   "entrypoints": [
     "static/css/main.18d15f8a.css",
-    "static/js/main.1af03d2e.js"
+    "static/js/main.d3c49965.js"
   ]
 }
