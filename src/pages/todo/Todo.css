@@ -1,0 +1,255 @@
+.todo-container {
+    height: 100vh;
+    margin: 0 7rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1rem;
+}
+
+.todo-header-title {
+    font-size: 1.5rem;
+    font-weight: var(--font-light);
+    color: var(--second-color);
+}
+
+.todo-header-group {
+    display: flex;
+}
+
+.todo-header-icon{
+    font-size: 1rem;
+    padding: .5rem .25rem 0 0;
+}
+
+.todo-search {
+    margin: 0 5px 0 0;
+
+    border: none;
+    border-bottom: 1px solid var(--second-color);
+
+    background-color: transparent;
+    outline: none; 
+}
+
+.todo-main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    overflow-y: scroll;
+}
+
+.todo-main::-webkit-scrollbar {
+    width: .125rem;
+}
+
+.todo-main::-webkit-scrollbar-thumb {
+    background-color: var(--second-color);
+}
+
+.todo-main-left {
+    width: 100%;
+    height: 100%;  
+    padding: 1rem;
+}
+
+.todo-main-list {
+    font-size: 1rem;
+    font-weight: var(--font-light);
+
+    margin-bottom: 1rem;
+}
+
+.todo-main-list-highlight {
+    font-size: 1.75rem;
+    font-weight: var(--font-light);
+}
+
+.todo-addtask-input {
+    display: flex;
+    border-bottom: 1px solid var(--second-color);
+}
+
+.todo-task-text {
+    margin-top: 3px;
+    margin-right: .75rem;
+}
+
+.todo-task-input {
+    width: 100%;
+    padding-top: 2px;
+    margin: 0 5px 0 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    outline: none;
+}
+
+.todo-color-input {
+    width: 25px;
+    height: 25px;
+
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.todo-deadline-input {
+    display: flex;
+    border-bottom: 1px solid var(--second-color);
+}
+
+.todo-deadline-text {
+    margin-top: .25rem;
+    margin-right: .75rem;
+}
+
+.todo-datetime-input {
+    width: 100%;
+    margin: 0 2px 0 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    text-align: end;
+    font-size: 1rem;
+    color: var(--second-color);
+
+    outline: none;
+}
+
+.todo-tasks-display-left {
+    height: 515px;
+    overflow-y: scroll;
+}
+
+.todo-tasks-display-left::-webkit-scrollbar {
+    width: .25rem;
+}
+
+.todo-tasks-display-left::-webkit-scrollbar-thumb {
+    background-color: var(--second-color);
+}
+
+.todo-taskname-group {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.25rem;
+    font-weight: var(--font-medium);
+
+    margin-bottom: .5rem;
+}
+
+.todo-button-group {
+    display: flex;
+    align-items: center;
+}
+
+.todo-done-button {
+    font-size: 1rem;
+}
+
+.todo-done-button, .todo-edit-button {
+    margin-right: .5rem;
+}
+
+.todo-datetime-group {
+    display: flex;
+    align-items: center;
+
+    font-size: 1rem;
+}
+
+.todo-main-right {
+    width: 100%;
+    height: 100%;  
+    padding: 1rem;
+}
+
+.todo-tasks-completed {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 6px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid var(--second-color);
+}
+
+.todo-tasks-display-right {
+    height: 515px;
+    overflow-y: scroll;
+}
+
+.todo-tasks-display-right::-webkit-scrollbar {
+    width: .25rem;
+}
+
+.todo-tasks-display-right::-webkit-scrollbar-thumb {
+    background-color: var(--second-color);
+}
+
+.bx-left-arrow-alt {
+    padding-top: 4px;
+}
+
+.bx-right-arrow-alt {
+    padding-top: 4px;
+}
+
+@media screen and (max-width: 1670px) {
+    .todo-main {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .todo-container {
+        margin: 0 1rem;
+    }
+
+    .todo-header-title {
+        font-size: 1.25rem;
+    }
+
+    .todo-tasks-display-left {
+        height: 300px;
+    }
+
+    .todo-tasks-display-right {
+        height: 300px;
+    }
+
+    .todo-header-icon{
+        font-size: .25rem;
+        padding: .25rem .25rem 0 0;
+    }
+
+    .todo-search {
+        margin: 0 5px 3px 0;
+    }
+
+    .bx-left-arrow-alt {
+        font-size: .75rem;
+        padding-top: 0;
+    }
+
+    .bx-right-arrow-alt {
+        font-size: .75rem;
+        padding-top: 0;
+    }
+
+}

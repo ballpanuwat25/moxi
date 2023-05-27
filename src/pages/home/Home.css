@@ -1,0 +1,487 @@
+.home-container {
+    height: 100vh;
+    margin: 0 7rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 1rem;
+}
+
+.home-header-logo {
+    width: 25%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: var(--font-light);
+    color: var(--second-color);
+    border-bottom: 1px solid var(--second-color);
+}
+
+.home-header-center {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-header-link {
+    margin: 0 1rem 0 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: var(--font-light);
+    color: var(--second-color);
+}
+
+.underline{
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+
+    position: relative;
+    cursor: pointer;
+}
+  
+.underline::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: var(--second-color);
+    
+    bottom: 0;
+    left: 0;
+    
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+    
+    position: absolute;
+}
+  
+.underline:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.home-header-darkmode {
+    width: 25%;
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--second-color);
+}
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    margin-bottom: 5px;
+    position: absolute;
+    cursor: pointer;
+    top: -5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    transition: .5s;
+    border-radius: 30px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: #ddd;
+    transition: .5s;
+}
+  
+input:checked + .slider {
+    background-color: #000;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #000;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(1.5em);
+}
+  
+.slider::after {
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    top: 10%;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    background-color: rgb(0, 0, 0);
+    transition: .5s;
+}
+  
+input:checked + .slider::after {
+    left: 80%;
+    width: 0px;
+    height: 0px;
+}
+
+.home-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.home-header-center-hidden {
+    display: none;
+}
+
+.home-main-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home-main-left-text {
+    font-size: 1rem;
+    font-weight: var(--font-extra-light);
+
+    border-bottom: 1px solid var(--second-color);
+    margin: 1rem 0 0 0;
+
+    width: 75%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    transition: .5s;
+}
+
+.home-main-left-text-highlight {
+    font-size: 2rem;
+    text-indent: .5rem;
+    font-weight: var(--font-regular);
+}
+
+.home-main-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+
+.home-main-right-logo {
+    font-size: 20rem;
+    font-family: var(--logo-font);
+    font-weight: var(--font-bold);
+
+    transition: .5s;
+}
+
+.home-main-right-cta {
+    width: 270px;
+    height: 70px;
+    margin: -2.5rem 1.25rem 0 0;
+    border: none;
+
+    font-size: 2rem;
+    font-weight: var(--font-regular);
+
+    background-color: var(--second-color);
+    color: var(--first-color);
+
+    transition: .5s;
+    cursor: pointer;
+}
+
+.home-main-right-cta:hover {
+    border: 1px solid var(--second-color);
+    color: var(--second-color);
+    background-color: transparent;
+}
+
+.home-footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-footer-contact {
+    display: flex;
+}
+
+.home-footer-contact-title {
+    margin-right: .5rem;
+}
+
+.home-footer-contact-icon {
+    margin: 0 .5rem;
+}
+
+.home-footer-marquee {
+    height: 25px;
+    width: 825px;
+  
+    overflow: hidden;
+    position: relative;
+}
+
+.home-footer-marquee div {
+    display: block;
+    width: 200%;
+    height: 30px;
+  
+    position: absolute;
+    overflow: hidden;
+  
+    animation: home-footer-marquee 20s linear infinite;
+}
+  
+.home-footer-marquee span {
+    float: left;
+    width: 50%;
+}
+
+.home-footer-marquee-text {
+    font-size: 1rem;
+}
+  
+@keyframes home-footer-marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+
+.home-footer-donate {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1520px) {
+    .home-header-logo, .home-header-link {
+        font-size: 1rem;
+    }
+
+    .switch {
+        font-size: .75rem;
+    }
+
+    .slider::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    .home-main-right-logo {
+        font-size: 15rem;
+    }
+
+    .home-main-right-cta {
+        width: 200px;
+        height: 60px;
+        margin: -2.5rem 1rem 0 0;
+        font-size: 1.5rem;
+    }
+
+    .home-main-left-text {
+        font-size: .75rem;
+    }
+
+    .home-main-left-text-highlight {
+        font-size: 1.5rem;
+    }
+
+    .home-footer-marquee {
+        width: 625px;
+    }
+
+    .home-footer-marquee-text {
+        font-size: .75rem;
+    }
+
+    .home-footer-donate {
+        font-size: .75rem;
+    }
+
+    .home-footer-contact {
+        width: 15%;
+        font-size: .75rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .home-header-logo, .home-header-link {
+        font-size: .75rem;
+    }
+
+    .switch {
+        font-size: .5rem;
+    }
+
+    .slider::after {
+        width: 10px;
+        height: 10px;
+    }
+
+    .home-main-right-logo {
+        font-size: 10rem;
+    }
+
+    .home-main-right-cta {
+        width: 135px;
+        height: 50px;
+        margin: -1.25rem .5rem 0 0;
+        font-size: 1rem;
+    }
+
+    .home-main-left-text {
+        font-size: .5rem;
+    }
+
+    .home-main-left-text-highlight {
+        font-size: 1.25rem;
+    }
+
+    .home-footer-marquee {
+        width: 525px;
+    }
+
+    .home-footer-marquee-text {
+        font-size: .5rem;
+    }
+
+    .home-footer-donate {
+        font-size: .5rem;
+    }
+
+    .home-footer-contact {
+        font-size: .5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .home-header-logo, .home-header-darkmode {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .home-header-link {
+        font-size: 1rem;
+    }
+
+    .switch {
+        font-size: 1rem;
+    }
+
+    .slider::after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .home-header-center, .home-main-left, .home-footer-marquee {
+        display: none;
+    }
+
+    .home-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home-header-center-hidden{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-main-right {
+        align-items: center;
+    }
+
+    .home-main-right-cta {
+        width: 175px;
+        height: 60px;
+        margin: .25rem 0 0 0;
+        font-size: 1.25rem;
+    }
+
+    .home-footer-contact {
+        width: 30%;
+        font-size: 1rem;
+    }
+
+    .home-footer-donate {
+        width: 30%;
+        font-size: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+    .home-container {
+        margin: 0 1rem;
+    }
+
+    .home-header-logo, .home-header-darkmode {
+        font-size: 1.25rem;
+    }
+
+    .home-header-link {
+        font-size: .75rem;
+    }
+
+    .switch {
+        font-size: .75rem;
+    }
+
+    .slider::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    .home-main-right-logo {
+        font-size: 7rem;
+    }
+
+    .home-main-right-cta {
+        width: 135px;
+        height: 50px;
+        margin: .25rem 0 0 0;
+        font-size: 1rem;
+    }
+
+    .home-footer-contact {
+        font-size: .75rem;
+    }
+
+    .home-footer-donate {
+        font-size: .75rem;
+    }
+    
+}

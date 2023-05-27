@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;500;700&family=Raleway:wght@200;300;400;500;700&display=swap');
+
+:root {
+  /*=========== COLORS ===========*/
+  --first-color: #dddddd;
+  --second-color: #101010;
+
+  /*=========== FONT AND TYPOGRAPHY ===========*/
+  --body-font: 'Anuphan', sans-serif;
+  --logo-font: 'Raleway', sans-serif;
+
+  /*=========== FONT WEIGHT ===========*/
+  --font-extra-light: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+  color: var(--second-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  background-color: var(--first-color);
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(50%);
+}
+
+input[type="radio"] {
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+.bx {
+  font-size: 1.5rem;
+}
+
+.sm {
+  font-size: 1.25rem;
+}
+
+.footer {
+  padding: 1rem;
+
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-prev {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-decoration: none;
+  color: var(--second-color);
 }
 
-.App-link {
-  color: #61dafb;
+.footer-prev-text {
+  cursor: pointer;
+
+  font-size: 1.25rem;
+  font-weight: var(--font-light);
+  margin-left: .75rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer-next {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+.footer-next-text {
+  cursor: pointer;
+
+  font-size: 1.25rem;
+  font-weight: var(--font-light);
+  margin-right: .75rem;
+}
+
+@media screen and (max-width: 650px) {
+  .footer-prev-text {
+    font-size: .75rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .footer-next-text {
+    font-size: .75rem;
   }
 }
