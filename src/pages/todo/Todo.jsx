@@ -452,7 +452,7 @@ function Todo() {
           <label className="footer-prev-text">Home</label>
         </NavLink>
 
-        <NavLink to="/schedule" className="footer-next underline">
+        <NavLink to="/classtimer" className="footer-next underline">
           <label className="footer-next-text">Class Timer</label>
 
           <i className='bx bx-right-arrow-alt' ></i>
