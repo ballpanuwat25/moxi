@@ -11,7 +11,7 @@ import Classtimer from './pages/schedule/Classtimer'
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={'/moxi'}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/memo" element={<Memo />} />
