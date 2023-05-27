@@ -23,6 +23,8 @@ function Todo() {
   const [tasks, setTasks] = useState([]);
   const [completed, setCompleted] = useState([]);
 
+  const [searchTerm, setSearchTerm] = useState('');
+
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const storedCompleted = JSON.parse(localStorage.getItem("completed")) || [];
@@ -208,6 +210,22 @@ function Todo() {
     }
   };
 
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredTasks = searchTerm
+    ? tasks.filter((item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    : tasks;
+
+  const filteredCompleted = searchTerm
+    ? completed.filter((item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    : completed;
+
   return (
     <div className="todo-container">
       <div className="todo-header">
@@ -222,6 +240,8 @@ function Todo() {
             type="text"
             placeholder="search"
             className="todo-search"
+            value={searchTerm}
+            onChange={handleSearch}
           />
 
         </div>
@@ -302,7 +322,7 @@ function Todo() {
                     ref={provided.innerRef}
                     style={getListStyle(snapshot.isDraggingOver)}
                   >
-                    {tasks.map((item, index) => (
+                    {filteredTasks.map((item, index) => (
                       <Draggable key={item.id} draggableId={item.id} index={index}>
                         {(provided, snapshot) => (
                           <div
@@ -371,7 +391,7 @@ function Todo() {
                     ref={provided.innerRef}
                     style={getListStyle(snapshot.isDraggingOver)}
                   >
-                    {completed.map((item, index) => (
+                    {filteredCompleted.map((item, index) => (
                       <Draggable key={item.id} draggableId={item.id} index={index}>
                         {(provided, snapshot) => (
                           <div
@@ -432,7 +452,7 @@ function Todo() {
           <label className="footer-prev-text">Home</label>
         </NavLink>
 
-        <NavLink to="/classtimer" className="footer-next underline">
+        <NavLink to="/schedule" className="footer-next underline">
           <label className="footer-next-text">Class Timer</label>
 
           <i className='bx bx-right-arrow-alt' ></i>
