@@ -407,8 +407,6 @@ function Todo() {
                             <div className="todo-taskname-group">
                               {item.name}
                               <div className="todo-button-group">
-                                <button className="todo-done-button underline" onClick={() => handleComplete(item)}>Done</button>
-                                <button className="todo-edit-button" onClick={() => handleEdit(item)}><i className='bx bxs-pencil' ></i></button>
                                 <button className="todo-delete-button" onClick={() => handleDelete(item.id)}><i className='bx bxs-trash-alt'></i></button>
                               </div>
                             </div>
