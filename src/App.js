@@ -5,8 +5,9 @@ import './App.css'
 import Home from './pages/home/Home'
 import Memo from './pages/memo/Memo'
 import Todo from './pages/todo/Todo'
-import Error from './pages/error/Error'
 import Classtimer from './pages/schedule/Classtimer'
+import Tutorial from './pages/tutorial/Tutorial'
+import Error from './pages/error/Error'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/memo" element={<Memo />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/classtimer" element={<Classtimer />} />
+        <Route path="/tutorial" element={<Tutorial />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

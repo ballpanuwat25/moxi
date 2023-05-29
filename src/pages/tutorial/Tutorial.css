@@ -1,0 +1,146 @@
+.tutorial-container {
+    height: 100vh;
+    margin: 0 7rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 1rem;
+}
+
+.home-header-logo {
+    width: 25%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: var(--font-light);
+    color: var(--second-color);
+    border-bottom: 1px solid var(--second-color);
+}
+
+.home-header-center {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-header-link {
+    margin: 0 1rem 0 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: var(--font-light);
+    color: var(--second-color);
+}
+
+.tutorial-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.tutorial-main-left{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tutorial-h1 {
+    font-size: 7rem;
+    font-weight: var(--font-bold);
+}
+
+.tutorial-h2 {
+    font-size: 2rem;
+    font-weight: var(--font-light);
+}
+
+.tutorial-main-right {
+    padding-right: 1rem;
+    width: 100%;
+    height: 97%;
+
+    overflow-y: scroll;
+}
+
+.tutorial-main-right::-webkit-scrollbar {
+    width: .125rem;
+}
+
+.tutorial-main-right::-webkit-scrollbar-thumb {
+    background-color: var(--second-color);
+}
+
+.tutorial-cta {
+    width: 270px;
+    height: 70px;
+    margin: 1.5rem 0 0 .5rem;
+    border: none;
+
+    font-size: 2rem;
+    font-family: var(--logo-font);
+    font-weight: var(--font-regular);
+
+    background-color: var(--second-color);
+    color: var(--first-color);
+
+    transition: .5s;
+    cursor: pointer;
+}
+
+.tutorial-cta:hover {
+    border: 1px solid var(--second-color);
+    color: var(--second-color);
+    background-color: transparent;
+}
+
+@media screen and (max-width: 1850px) {
+    .tutorial-h1 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 1515px) {
+    .tutorial-h1 {
+        font-size: 4rem;
+    }
+
+    .tutorial-h2 {
+        font-size: 1.75rem;
+    }
+
+}
+
+@media screen and (max-width: 1335px) {
+    .tutorial-h1 {
+        font-size: 3rem;
+    }
+
+    .tutorial-h2 {
+        font-size: 1.5rem;
+    }
+
+    .tutorial-p {
+        font-size: .75rem;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .tutorial-main {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .tutorial-container {
+        margin: 1rem;
+    }
+}

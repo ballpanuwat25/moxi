@@ -1,0 +1,80 @@
+.error-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-404 {
+    margin-top: -7rem;
+    font-size: 20rem;
+    font-family: var(--err-font);
+    font-weight: var(--font-light);
+
+    transition: .5s;
+}
+
+.error-notfound {
+    margin-top: -3.5rem;
+    font-size: 1.5rem;
+    font-weight: var(--font-extra-light);
+}
+
+.error-cta {
+    width: 270px;
+    height: 70px;
+    margin: 1.5rem 0 0 0;
+    border: none;
+
+    font-size: 2rem;
+    font-family: var(--logo-font);
+    font-weight: var(--font-regular);
+
+    background-color: var(--second-color);
+    color: var(--first-color);
+
+    transition: .5s;
+    cursor: pointer;
+}
+
+.error-cta:hover {
+    border: 1px solid var(--second-color);
+    color: var(--second-color);
+    background-color: transparent;
+}
+
+@media screen and (max-width: 815px) {
+    .error-404 {
+        font-size: 15rem;
+    }
+
+    .error-notfound {
+        margin-top: -2rem;
+        font-size: 1rem;
+    }
+
+    .error-cta {
+        width: 200px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .error-404 {
+        font-size: 10rem;
+    }
+
+    .error-notfound {
+        margin-top: -1.5rem;
+        font-size: 1rem;
+    }
+
+    .error-cta {
+        width: 135px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}

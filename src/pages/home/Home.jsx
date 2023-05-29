@@ -5,8 +5,6 @@ import 'animate.css';
 import './Home.css'
 
 function Home() {
-
-  //Darkmode
   const [darkMode, setDarkMode] = useState(false);
 
   const handleDarkModeToggle = () => {
@@ -94,16 +92,18 @@ function Home() {
         </div>
         <div className="home-main-right">
           <div className="home-main-right-logo animate__animated animate__fadeInUp">MOXi</div>
-          <button className="home-main-right-cta">Start Now!</button>
+          <NavLink to="/tutorial">
+            <button className="home-main-right-cta">Start Now!</button>
+          </NavLink>
         </div>
       </main>
 
       <footer className="home-footer">
         <div className="home-footer-contact underline">
           <div className="home-footer-contact-title">Contact</div>
-          <i className="fa-brands fa-github home-footer-contact-icon "></i>
-          <i className="fa-brands fa-dribbble home-footer-contact-icon "></i>
-          <i className="fa-brands fa-codepen home-footer-contact-icon "></i>
+          <a href='https://github.com/ballpanuwat25'><i className="fa-brands fa-github home-footer-contact-icon "></i></a>
+          <a href='https://dribbble.com/ballpanuwat25'><i className="fa-brands fa-dribbble home-footer-contact-icon "></i></a>
+          <a href='https://codepen.io/ballpanuwat25'><i className="fa-brands fa-codepen home-footer-contact-icon "></i></a>
         </div>
 
         <div className="home-footer-marquee">
@@ -114,7 +114,7 @@ function Home() {
         </div>
 
         <div className="home-footer-donate underline">
-          Buy me a coffin.
+          Buy me a coffin.💀
         </div>
       </footer>
     </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;500;700&family=Raleway:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;500;700&family=Raleway:wght@200;300;400;500;700&family=Roboto+Mono&display=swap');
 
 :root {
   /*=========== COLORS ===========*/
@@ -8,6 +8,7 @@
   /*=========== FONT AND TYPOGRAPHY ===========*/
   --body-font: 'Anuphan', sans-serif;
   --logo-font: 'Raleway', sans-serif;
+  --err-font: 'Roboto Mono', monospace;
 
   /*=========== FONT WEIGHT ===========*/
   --font-extra-light: 200;

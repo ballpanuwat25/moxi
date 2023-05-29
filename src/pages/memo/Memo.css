@@ -85,7 +85,7 @@
 .note-item {
     height: fit-content;
     margin-top: .5rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 
     border-bottom: 1px solid var(--second-color);
 }
@@ -263,7 +263,7 @@
 
 @media screen and (max-width: 475px) {
     .note-count {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .note-title,
@@ -272,10 +272,10 @@
     }
 
     .note-title {
-        font-size: .25rem;
+        font-size: .75rem;
     }
 
     .note-timestamp {
-        font-size: .25rem;
+        font-size: .75rem;
     }
 }
