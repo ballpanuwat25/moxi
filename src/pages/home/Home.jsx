@@ -64,12 +64,12 @@ function Home() {
 
         <div className="home-header-center-hidden">
           <NavLink to="/todo" className="home-header-link underline">To-Do</NavLink>
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8" fill="none">
-            <path d="M5.4517 8L4.94886 7.50142L7.91477 4.53977H0.5V3.82386H7.91477L4.94886 0.862216L5.4517 0.363636L9.26989 4.18182L5.4517 8Z" fill="black" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8">
+            <path d="M5.4517 8L4.94886 7.50142L7.91477 4.53977H0.5V3.82386H7.91477L4.94886 0.862216L5.4517 0.363636L9.26989 4.18182L5.4517 8Z" fill="currentColor" />
           </svg>
           <NavLink to="/classtimer" className="home-header-link underline">Class Timer</NavLink>
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8" fill="none">
-            <path d="M5.4517 8L4.94886 7.50142L7.91477 4.53977H0.5V3.82386H7.91477L4.94886 0.862216L5.4517 0.363636L9.26989 4.18182L5.4517 8Z" fill="black" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8">
+            <path d="M5.4517 8L4.94886 7.50142L7.91477 4.53977H0.5V3.82386H7.91477L4.94886 0.862216L5.4517 0.363636L9.26989 4.18182L5.4517 8Z" fill="currentColor" />
           </svg>
           <NavLink to="/memo" className="home-header-link underline">MeMo</NavLink>
         </div>
