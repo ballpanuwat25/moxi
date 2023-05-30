@@ -6,37 +6,6 @@
     flex-direction: column;
 }
 
-.home-header {
-    display: flex;
-    justify-content: space-between;
-    
-    padding: 1rem;
-}
-
-.home-header-logo {
-    width: 25%;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: var(--font-light);
-    color: var(--second-color);
-    border-bottom: 1px solid var(--second-color);
-}
-
-.home-header-center {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-header-link {
-    margin: 0 1rem 0 1rem;
-    font-size: 1.25rem;
-    text-decoration: none;
-    font-weight: var(--font-light);
-    color: var(--second-color);
-}
-
 .tutorial-main {
     width: 100%;
     height: 100%;
