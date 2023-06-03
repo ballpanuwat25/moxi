@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/moxi/static/css/main.f6034f47.css",
-    "main.js": "/moxi/static/js/main.769f6e4d.js",
+    "main.js": "/moxi/static/js/main.c015704e.js",
+    "static/js/787.7d1c83d3.chunk.js": "/moxi/static/js/787.7d1c83d3.chunk.js",
     "index.html": "/moxi/index.html",
     "main.f6034f47.css.map": "/moxi/static/css/main.f6034f47.css.map",
-    "main.769f6e4d.js.map": "/moxi/static/js/main.769f6e4d.js.map"
+    "main.c015704e.js.map": "/moxi/static/js/main.c015704e.js.map",
+    "787.7d1c83d3.chunk.js.map": "/moxi/static/js/787.7d1c83d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6034f47.css",
-    "static/js/main.769f6e4d.js"
+    "static/js/main.c015704e.js"
   ]
 }
