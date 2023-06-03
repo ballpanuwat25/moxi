@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 
 // Pages
@@ -12,16 +12,14 @@ import Error from './pages/error/Error'
 function App() {
 
   return (
-    <BrowserRouter basename={'/moxi'}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/memo" element={<Memo />} />
-        <Route path="/todo" element={<Todo />} />
-        <Route path="/classtimer" element={<Classtimer />} />
-        <Route path="/tutorial" element={<Tutorial />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/memo" element={<Memo />} />
+      <Route path="/todo" element={<Todo />} />
+      <Route path="/classtimer" element={<Classtimer />} />
+      <Route path="/tutorial" element={<Tutorial />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
   )
 }
 
