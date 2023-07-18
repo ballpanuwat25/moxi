@@ -17,7 +17,7 @@
     "swiper": "^9.3.2",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://ballpanuwat25.github.io/moxi",
+  "homepage": "http://ballpanuwat25.github.io/responsiveMoxi-Frontend",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
